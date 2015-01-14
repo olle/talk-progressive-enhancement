@@ -1,0 +1,63 @@
+/* BASE */
+
+html,
+body {
+  font-size: 100%;
+  line-height: 1.6789;
+  color: #222;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+  background: #b3b3af url(../img/noise.png) top left repeat;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  height: 100%;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 1em;
+}
+h1 {
+  margin-top: 0;
+  padding-top: .67em;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  margin-bottom: .2em;
+}
+code {
+  white-space: nowrap;
+  font-family: monospace;
+  background: #B8D1E8;
+  color: #000;
+  padding: .1em .5em .2em;
+  border-radius: .4em;
+  text-shadow: 0px 1px 0px #ccc;
+}
+a {
+  color: #36b;
+}
+
+input,
+button {
+  display: inline-block;
+  border: none;
+  line-height: 130%;
+  font-family: inherit;
+  font-size: 100%;
+  padding: .56em;
+}
+input {
+  background: #fff;
+  border-bottom: 2px solid #f1f1f1;
+}
+button {
+  background: lightgreen;
+  border-bottom: 2px solid darkgreen;
+}
+
+ul {
+  margin: 0;
+  margin-bottom: .3em;
+  list-style: none;
+}
