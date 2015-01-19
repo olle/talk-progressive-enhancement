@@ -16,6 +16,15 @@ public class Episodes {
     episodes.add(new Episode.One());
     episodes.add(new Episode.Two());
     episodes.add(new Episode.Three());
+    episodes.add(new Episode.Four());
+    episodes.add(new Episode.Five());
+    episodes.add(new Episode.Six());
+    episodes.add(new Episode.Seven());
+    episodes.add(new Episode.Eight());
+    episodes.add(new Episode.Nine());
+    episodes.add(new Episode.Ten());
+    episodes.add(new Episode.Eleven());
+    episodes.add(new Episode.Twelve());
   }
 
   public static void appendTo(Model model) {
