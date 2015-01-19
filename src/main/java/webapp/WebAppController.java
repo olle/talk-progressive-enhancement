@@ -26,4 +26,14 @@ public class WebAppController {
     return "v1";
   }
 
+  /**
+   * Second version, adding inline-styling, this is our initial step to make the
+   * app useful on mobile devices _FIRST_.
+   */
+  @RequestMapping(value = "/v2/episodes/")
+  public String displaySecond(Model model) {
+    Episodes.appendTo(model);
+    return "v2";
+  }
+
 }

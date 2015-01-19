@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Progressive Enhancement in Practice - v1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    h1 {
+      display: block;
+      font-weight: 200;
+      font-size: 160%;
+      text-align: center;
+      margin: 0;
+      padding: .4em;
+      border-bottom: 1px solid rgba(0, 0, 0, .3);
+      background: #0277BD;
+      color: #fff;
+    }
+    h2 {
+      display: block;
+      margin: 0;
+      padding: .7em;
+      font-weight: 400;
+      font-size: 80%;
+      background: #E0E0E0;
+      color: #4a4a4a;
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+    }
+    ol {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: block;
+      margin: 0;
+      line-height: 2em;
+      padding: .7em 0;
+      border-bottom: 1px solid #ddd;
+    }
+    li > small {
+      display: inline-block;
+      width: 2ex;
+      text-align: center;
+      line-height: 2em;
+      color: #bebebe;
+      padding-left: .7em;
+    }
+    li > a {
+      margin-left: .7em;
+      color: #01579B;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Yacht Rock</h1>
+  <h2>Episodes</h2>
+  <ol>
+    {{#episodes}} {{> _episode_v2}} {{/episodes}}
+  </ol>
+</body>
+
+</html>
