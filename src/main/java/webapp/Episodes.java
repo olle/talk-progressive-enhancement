@@ -30,4 +30,9 @@ public class Episodes {
   public static void appendTo(Model model) {
     model.addAttribute("episodes", episodes);
   }
+
+  public static void appendToByNumber(int number, Model model) {
+    int index = number - 1;
+    model.addAttribute("episode", episodes.get(index));
+  }
 }

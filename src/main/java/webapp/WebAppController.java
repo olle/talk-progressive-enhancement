@@ -2,6 +2,7 @@ package webapp;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -16,24 +17,16 @@ public class WebAppController {
     return "redirect:/v1/episodes/";
   }
 
-  /**
-   * The most simple view possible, used as a starting point. We take care to
-   * ensure that the request maps semantically to a view of `episodes`.
-   */
-  @RequestMapping(value = "/v1/episodes/")
-  public String displayFirst(Model model) {
+  @RequestMapping(value = "/{version}/episodes/")
+  public String displayEpisodes(@PathVariable String version, Model model) {
     Episodes.appendTo(model);
-    return "v1";
+    return version + "/episodes";
   }
 
-  /**
-   * Second version, adding inline-styling, this is our initial step to make the
-   * app useful on mobile devices _FIRST_.
-   */
-  @RequestMapping(value = "/v2/episodes/")
-  public String displaySecond(Model model) {
-    Episodes.appendTo(model);
-    return "v2";
+  @RequestMapping(value = "/{version}/episodes/{number}/")
+  public String displayEpisode(@PathVariable String version, @PathVariable int number, Model model) {
+    Episodes.appendToByNumber(number, model);
+    return version + "/episode";
   }
 
 }

@@ -11,7 +11,13 @@
   <h1>Yacht Rock</h1>
   <h2>Episodes</h2>
   <ol>
-    {{#episodes}} {{> _episode_v1}} {{/episodes}}
+    {{#episodes}}
+    <li value="{{number}}">
+      <a href="./{{number}}/">
+        <q>{{title}}</q>
+      </a>
+    </li>
+    {{/episodes}}
   </ol>
 </body>
 

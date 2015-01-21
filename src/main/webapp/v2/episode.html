@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Progressive Enhancement in Practice - v2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fafafa;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    h1 {
+      display: block;
+      font-weight: 300;
+      font-size: 80%;
+      text-align: center;
+      margin: 0;
+      padding: 8px;
+      border-bottom: 1px solid rgba(0, 0, 0, .3);
+      background: #0277BD;
+      color: #fff;
+    }
+    h2 {
+      display: block;
+      margin: 0;
+      padding: 16px;
+      font-weight: 200;
+      font-size: 160%;
+      background: #E0E0E0;
+      color: #4a4a4a;
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+    }
+    h3 {
+      display: block;
+      margin: 0;
+      padding: 16px;
+    }
+    blockquote {
+      margin: 0;
+      padding: 24px;
+      padding-top: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Yacht Rock</h1>
+  {{#episode}}
+  <h2>Episode {{number}}</h2>
+  <h3>
+    <q>{{title}}</q>
+  </h3>
+  <blockquote>{{description}}</blockquote>
+  {{/episode}}
+</body>
+
+</html>

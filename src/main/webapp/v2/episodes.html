@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Progressive Enhancement in Practice - v1</title>
+  <title>Progressive Enhancement in Practice - v2</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -18,7 +18,7 @@
       font-size: 160%;
       text-align: center;
       margin: 0;
-      padding: .4em;
+      padding: 16px;
       border-bottom: 1px solid rgba(0, 0, 0, .3);
       background: #0277BD;
       color: #fff;
@@ -26,7 +26,7 @@
     h2 {
       display: block;
       margin: 0;
-      padding: .7em;
+      padding: 8px 16px;
       font-weight: 400;
       font-size: 80%;
       background: #E0E0E0;
@@ -42,19 +42,18 @@
       display: block;
       margin: 0;
       line-height: 2em;
-      padding: .7em 0;
+      padding: 8px 0;
       border-bottom: 1px solid #ddd;
     }
     li > small {
       display: inline-block;
       width: 2ex;
-      text-align: center;
       line-height: 2em;
       color: #bebebe;
-      padding-left: .7em;
+      padding-left: 24px;
     }
     li > a {
-      margin-left: .7em;
+      margin-left: 16px;
       color: #01579B;
       text-decoration: none;
     }
@@ -65,7 +64,14 @@
   <h1>Yacht Rock</h1>
   <h2>Episodes</h2>
   <ol>
-    {{#episodes}} {{> _episode_v2}} {{/episodes}}
+    {{#episodes}}
+    <li value="{{number}}">
+      <small>{{number}}</small>
+      <a href="./{{number}}/">
+        <q>{{title}}</q>
+      </a>
+    </li>
+    {{/episodes}}
   </ol>
 </body>
 
