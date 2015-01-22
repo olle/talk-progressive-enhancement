@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Progressive Enhancement in Practice - v3</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css">body,h1,h2,li,ol{margin:0;padding:0}h1,h2,li{display:block}body{background:#fafafa;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}h1{font-weight:200;font-size:160%;text-align:center;padding:16px;border-bottom:1px solid rgba(0,0,0,.3);background:#0277BD;color:#fff}h2{padding:8px 16px;font-weight:400;font-size:80%;background:#E0E0E0;color:#4a4a4a;border-bottom:1px solid rgba(0,0,0,.2)}ol{list-style:none}li{line-height:2em;padding:8px 0;border-bottom:1px solid #ddd}li>small{display:inline-block;width:2ex;line-height:2em;color:#bebebe;padding-left:24px}li>a{margin-left:16px;color:#01579B;text-decoration:none;}</style>
+</head>
+
+<body>
+  <h1>Yacht Rock</h1>
+  <h2>Episodes</h2>
+  <ol>
+    {{#episodes}}
+    <li value="{{number}}">
+      <small>{{number}}</small>
+      <a href="./{{number}}/">
+        <q>{{title}}</q>
+      </a>
+    </li>
+    {{/episodes}}
+  </ol>
+
+  <script src="/assets/headjs/dist/1.0.0/head.min.js"></script>
+  <script>
+    if (head.screen.innerHeight < 800) {
+        alert('small!');
+    }
+  </script>
+</body>
+
+</html>

@@ -6,6 +6,7 @@
   "dependencies": {
     "mustache": "~0.8.2",
     "jquery": "~2.1.1",
-    "requirejs": "~2.1.15"
+    "requirejs": "~2.1.15",
+    "headjs": "~1.0.3"
   }
 }
