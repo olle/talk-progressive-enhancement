@@ -5,27 +5,76 @@
   <meta charset="utf-8">
   <title>Progressive Enhancement in Practice - v3</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style type="text/css">body,h1,h2,li,ol{margin:0;padding:0}h1,h2,li{display:block}body{background:#fafafa;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif}h1{font-weight:200;font-size:160%;text-align:center;padding:16px;border-bottom:1px solid rgba(0,0,0,.3);background:#0277BD;color:#fff}h2{padding:8px 16px;font-weight:400;font-size:80%;background:#E0E0E0;color:#4a4a4a;border-bottom:1px solid rgba(0,0,0,.2)}ol{list-style:none}li{line-height:2em;padding:8px 0;border-bottom:1px solid #ddd}li>small{display:inline-block;width:2ex;line-height:2em;color:#bebebe;padding-left:24px}li>a{margin-left:16px;color:#01579B;text-decoration:none;}</style>
+  <style>
+    body, h1, h2, h3, ol, li { margin: 0; padding: 0; }
+    .yr {
+      background: #fafafa;
+      color: #4a4a4a;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    .yr-title {
+      display: block;
+      font-weight: 200;
+      font-size: 160%;
+      text-align: center;
+      padding: 16px;
+      border-bottom: 1px solid rgba(0, 0, 0, .3);
+      background: #0277BD;
+      color: #fff;
+    }
+    .yr-label {
+      display: block;
+      padding: 8px 16px;
+      font-weight: 400;
+      font-size: 80%;
+      background: #E0E0E0;
+      border-bottom: 1px solid rgba(0, 0, 0, .2);
+    }
+    .yr-episodes {
+      list-style: none;
+    }
+    .yr-episode {
+      display: block;
+      margin: 0;
+      line-height: 2em;
+      padding: 8px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .yr-episode > .yr-episode--number {
+      display: inline-block;
+      width: 2ex;
+      line-height: 2em;
+      color: #bebebe;
+      padding-left: 24px;
+    }
+    .yr-episode > .yr-episode--title {
+      margin-left: 16px;
+      color: #01579B;
+      text-decoration: none;
+    }
+  </style>
 </head>
 
-<body>
-  <h1>Yacht Rock</h1>
-  <h2>Episodes</h2>
-  <ol>
+<body class="yr">
+  <h1 class="yr-title">Yacht Rock</h1>
+  <h2 class="yr-label">Episodes</h2>
+  <ol class="yr-episodes">
     {{#episodes}}
-    <li value="{{number}}">
-      <small>{{number}}</small>
-      <a href="./{{number}}/">
+    <li class="yr-episode" value="{{number}}">
+      <small class="yr-episode--number">{{number}}</small>
+      <a class="yr-episode--title" href="./{{number}}/">
         <q>{{title}}</q>
       </a>
     </li>
     {{/episodes}}
   </ol>
-
   <script src="/assets/headjs/dist/1.0.0/head.min.js"></script>
   <script>
-    if (head.screen.innerHeight < 800) {
-        alert('small!');
+    if (head.screen.innerWidth > 480) {
+        head.load(
+          '/assets/jquery/dist/jquery.min.js',
+          '/js/details.js',
+          '/css/details.css');
     }
   </script>
 </body>

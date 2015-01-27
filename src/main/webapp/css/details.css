@@ -1,0 +1,61 @@
+.yr-episodes {
+  display: inline-block;
+  width: 50%;
+  box-shadow: 2px 0px 1px rgba(0, 0, 0, .3);
+}
+
+.yr-episode--details {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  box-sizing: border-box;
+  padding: 24px;
+}
+
+.yr-episode--title {
+  position: relative;
+  left: 0;
+  -webkit-transition: left .35s cubic-bezier(0.19, 1, 0.22, 1);
+          transition: left .35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.yr-episodes > .yr-episode:hover {
+  cursor: pointer;
+}
+
+.yr-episodes > .yr-episode:hover,
+.yr-episodes > .yr-episode.is-selected {
+  background: #efefef;
+}
+
+.yr-episode.is-selected > .yr-episode--title {
+  text-align: right;
+  left: 3ex;
+}
+
+.yr-episodes > .yr-episode.is-selected:hover {
+  cursor: default;
+}
+
+.yr-episode--details > .yr-label {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  background: none;
+  float: right;
+  border: none;
+  color: #bebebe;
+  text-transform: uppercase;
+}
+
+.yr-episode--details > .yr-episode--title {
+  margin: 0 0 16px;
+  padding: 0;
+}
+
+.yr-episode--details > .yr-episode--summary {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  line-height: 1.56789;
+}
