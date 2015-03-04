@@ -23,7 +23,7 @@ public class WebAppController {
     return version + "/episodes";
   }
 
-  @RequestMapping(value = "/{version}/episodes/{number}/")
+  @RequestMapping(value = { "/{version}/episodes/{number}", "/{version}/episodes/{number}/" })
   public String displayEpisode(@PathVariable String version, @PathVariable int number, Model model) {
     Episodes.appendToByNumber(number, model);
     return version + "/episode";
